@@ -25,8 +25,8 @@
 
 	int main(){
 		int answer; //creates answer variable
-		lower = 5;
-		upper = 95;
+		scanf ("%d", &lower);
+		scanf ("%d", &upper);
 		answer = Add();
 		printf("%d\n",answer);
 		return 0;
