@@ -19,15 +19,7 @@
 	int lower=0;
 	int upper=0;
 	int numoftimes=0;
-	int mop7array[];
-	int not7array[];
-
-//	int x=0;
-//	for (x=lower;x<upper;x++){
-//		if(xmod7=0){
-//		x = newarray;
-//		} // end of if	
-//	}// end of for loop
+	int mod7array[10000000000000];
 	
 	int Add(){ //add these two variables together
 		return lower + upper;
@@ -40,54 +32,28 @@
 	}
 
 int main(){
+	printf("hello");
 
-	int x = lower;
-	int place = 0;
-	int num = 0;
-	int in = 0;
-	place = count();//number of times played
-	scanf ("%d", &lower);//user input for lower
-        scanf ("%d", &upper);//user input for upper
-	for(num=0;num<place;num++){ //loop for how many times you play the game
-		for(x=lower; x<upper; x++) { //loop through number
-			if(x % 7 == !0){ // mod test
-				in++; // index array 
-				mod7array[x];//stores number not divisable by 7
-			}//end of if
-		}//end of nested for loop
-	}// end of for loop
-              int answer; //creates answer variable
-              scanf ("%d", &lower);
-              scanf ("%d", &upper);
-              answer = Add();
-              printf("Heres your answer\n");
-              printf("%d\n",answer);
-              printf("\n");
-      }
-      return 0;
+	int x=0;
+	int total=0;;
+	for(x=lower;x<upper;x++){
+		if(x%7 == 0){
+			mod7array[] = x;
+		}
+	return total = total +;
+	}
+
+	int num=0;
+	int place=0;
+	place=count();
+	for(num=0;num<place;num++){
+		int answer; //creates answer variable
+		scanf ("%d", &lower);
+		scanf ("%d", &upper);
+		answer = Add();
+		printf("Heres your answer\n");
+		printf("%d\n",answer);
+		printf("\n");
+	}
+	return 0;
 }
-
-
-//	int x=0;
-//	int total=0;;
-//	for(x=lower;x<upper;x++){
-//		if(x%7 == 0){
-//			newarray[] = x;
-//		}
-//	return total = total +;
-//	}
-
-//	int num=0;
-//	int place=0;
-//	place=count();
-//	for(num=0;num<place;num++){
-//		int answer; //creates answer variable
-//		scanf ("%d", &lower);
-//		scanf ("%d", &upper);
-//		answer = Add();
-//		printf("Heres your answer\n");
-//		printf("%d\n",answer);
-//		printf("\n");
-//	}
-//	return 0;
-//}
