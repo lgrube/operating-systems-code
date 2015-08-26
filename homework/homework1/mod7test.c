@@ -19,8 +19,8 @@
 	int lower=0;
 	int upper=0;
 	int numoftimes=0;
-	int mop7array[];
-	int not7array[];
+	int mod7array[10000000000000];
+	
 
 //	int x=0;
 //	for (x=lower;x<upper;x++){
@@ -40,30 +40,33 @@
 	}
 
 int main(){
-
+	printf("hello");
 	int x = lower;
 	int place = 0;
 	int num = 0;
 	int in = 0;
+	int answer = 0; //creates answer variable
 	place = count();//number of times played
+//	printf("this is the place" + place);
 	scanf ("%d", &lower);//user input for lower
         scanf ("%d", &upper);//user input for upper
-	for(num=0;num<place;num++){ //loop for how many times you play the game
+	for(num=0;num<place;num++){ //loop for how many times you play the gamei
 		for(x=lower; x<upper; x++) { //loop through number
 			if(x % 7 == !0){ // mod test
 				in++; // index array 
 				mod7array[x];//stores number not divisable by 7
+//				printf(x);
+//				printf(mod7array[x]);
 			}//end of if
 		}//end of nested for loop
 	}// end of for loop
-              int answer; //creates answer variable
-              scanf ("%d", &lower);
-              scanf ("%d", &upper);
+//             scanf ("%d", &lower);
+//              scanf ("%d", &upper);
               answer = Add();
               printf("Heres your answer\n");
               printf("%d\n",answer);
               printf("\n");
-      }
+      
       return 0;
 }
 
