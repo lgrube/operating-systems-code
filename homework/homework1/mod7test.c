@@ -1,4 +1,5 @@
 /**  luke grube
+ *  working on dividing everything by mod 7
  *
  *  Problem discription:
  *      Given two input numbers, say lower and upper,  there are some numbers that cannot be divided exactly  by 7
