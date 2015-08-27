@@ -1,4 +1,5 @@
 /**  luke grube
+ *   august 27 2015
  *
  *  Problem discription:
  *      Given two input numbers, say lower and upper,  there are some numbers that cannot be divided exactly  by 7
@@ -19,41 +20,42 @@
 	int lower=0;
 	int upper=0;
 	int numoftimes=0;
-	int mod7array[10000000000000];
+	int total = 0;
+	int x = 0;
 	
 	int Add(){ //add these two variables together
-		return lower + upper;
+		return total = total + x; // adds x to total each time
 	} // end of add 
 
 	int count() {
-		printf ("How many times would you like to play this: ");
-		scanf ("%d", &numoftimes);
+		printf ("How many times would you like to play this: "); // ask you how many times to play
+		if(scanf ("%d", &numoftimes) ==1 && numoftimes>=0){ // scans if its an int
 		return numoftimes;
+		}
+		else{
+		printf("you didnt enter an number play again\n"); //exits out if it isnt a int
+		}
 	}
+
 
 int main(){
-	printf("hello");
-
-	int x=0;
-	int total=0;;
-	for(x=lower;x<upper;x++){
-		if(x%7 == 0){
-			mod7array[] = x;
-		}
-	return total = total +;
-	}
-
+	int answer=0;
 	int num=0;
-	int place=0;
-	place=count();
-	for(num=0;num<place;num++){
-		int answer; //creates answer variable
-		scanf ("%d", &lower);
-		scanf ("%d", &upper);
-		answer = Add();
-		printf("Heres your answer\n");
-		printf("%d\n",answer);
+	int place=0; 
+	place=count();//setting how many times you want to play the game
+	for(num=0;num<place;num++){//how many times your playing
+		if(scanf ("%d", &lower) ==1 && lower>=0){} //test to make sure lower is an int
+		if(scanf ("%d", &upper) ==1 && upper>=0){} //test to make sure upper is an int
+		for(x=lower;x<upper;x++){ //for loop for mod7
+			if(x%7 != 0) {//test to see mod 7 not equal to 0
+				answer = Add(x);//calls add function
+			}//end of if
+
+		}// end of second for loop
+		printf("Here's your answer\n");
+		printf("%d\n", answer);// prints answer
 		printf("\n");
-	}
+
+	}//end of first for loop
 	return 0;
-}
+}//end of main
