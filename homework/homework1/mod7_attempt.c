@@ -40,11 +40,13 @@
 
 int main(){
 	int answer=0;
-	int num=0;
-	int place=0; 
-	place=count();//setting how many times you want to play the game
-	for(num=0;num<place;num++){//how many times your playing
+//	int num=0;
+//	int place=0; 
+//	place=count();//setting how many times you want to play the game
+//	for(num=0;num<place;num++){//how many times your playing
+		printf("Put in a low number:\n");
 		if(scanf ("%d", &lower) ==1 && lower>=0){} //test to make sure lower is an int
+		printf("Put in a high number\n");
 		if(scanf ("%d", &upper) ==1 && upper>=0){} //test to make sure upper is an int
 		for(x=lower;x<upper;x++){ //for loop for mod7
 			if(x%7 != 0) {//test to see mod 7 not equal to 0
@@ -56,6 +58,6 @@ int main(){
 		printf("%d\n", answer);// prints answer
 		printf("\n");
 
-	}//end of first for loop
+//	}//end of first for loop
 	return 0;
 }//end of main
