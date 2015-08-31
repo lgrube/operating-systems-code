@@ -52,12 +52,10 @@ int main(){
 			if(x%7 != 0) {//test to see mod 7 not equal to 0
 				answer = Add(x);//calls add function
 			}//end of if
-
 		}// end of second for loop
 		printf("Here's your answer\n");
 		printf("%d\n", answer);// prints answer
 		printf("\n");
-
 //	}//end of first for loop
 	return 0;
 }//end of main
