@@ -4,19 +4,22 @@
 
 #include <stdio.h>
 #include <pthread.h>
+#include <sys/types.h>
+#include <sys/syscall.h>
+//#include "lsLinkFile"
 
-pthread_t thread_id = 0x0;
-void print_hello_world() {
-    thread_id = pthread_self();  //like getpid in process, but for threads
-    printf("You deallocated my father!\n");
-    pthread_exit(0);
+void* helloThread(void* tmp) {
+printf("Hello world, I am thread: %u\n", (unsigned int)pthread_self());
+sleep(2); // Keep it alive so we're sure the second thread gets a unique ID.
+return NULL;
 }
 
-int main() {
-  pthread_t thread;
-  pthread_create(&thread, NULL, (void *)&print_hello_world, NULL);
-  // pthread_yield();
-  printf("No, thread %#010x, I AM your father!!\n", thread_id);
-  printf("hello world, i am thread %010x\n", thread_id);
-  return 0;
+int main(int argc, char **argv) {
+pthread_t thread1, thread2;
+sleep(1); // Hack to avoid race for stdout.
+pthread_create(&thread2, NULL, helloThread, NULL);
+pthread_join(thread1, NULL);
+pthread_join(thread2, NULL);
+printf("I am the father process: %d\n", getpid());
+return(0);
 }
